@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+bubles {
+  border-radius:100%;
+  position: absolute;
+  pointer-events: none;
+  background: #20e3a2;
+  box-shadow:  10px 10px 30px #31c8a2, 
+             -10px -10px 30px #31c8a2;
+  transform: translate(-50%, -50%);
+  animation: colorgen 1s infinite;
+}
+
+@keyframes colorgen {
+  0% {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    filter: hue-rotate(270deg);
+  }
+}
+
+html {
+    background-size: 3000px;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+p {
+    color: white;
+}
+h2, h3, h4, h5, h6 {
+    color: white;
+}
+h1 { 
+    color:white;
+}
+</style>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>#palyaudvargang <3 </title>
+</head>
+<center>
+    <h4>#palyaudvargang</h4>
+    <p>REASON: A fucking rat :)</p>
+    <p>NAME: Balla Áron</p>
+    <p>SCHOOL: Bonyhád, Széchenyi István Általános Iskola</p>
+    <p>BORN: 2009. 10.07 Szekszárd</p>
+    <p>ADRESS: Bonyhád Veres P. 15</p>
+    <p>IP: 91.146.165.174</p>
+    <p>PLAYING AT: Atomerőmű KSE Bonyhád</p>
+    <p>DISCORD: £imhax#5318</p>
+    <p>MOTHER: Kovács Krisztina</p>
+    <p>BORN: 1978. 06.13 Bonyhád</p>
+    <p>DAD: Ákos Balla</p>
+    <p>BORN: 1976. JAN. 08. Bonhyád</p>
+    <p>BROTHER: Bálint Balla</p>
+</center>
+<script>
+console.log("név nagyb");
+document.addEventListener('mousemove', e=> {
+
+let bubles = document.createElement('bubles');
+let x = e.pageX;
+let y = e.pageY;
+bubles.style.left = x + "px";
+bubles.style.top = y + "px";
+let size = Math.random() * 12;
+bubles.style.width = 1 + size + "px";
+bubles.style.height = 1 + size + "px";
+
+document.body.appendChild(bubles);
+setTimeout(function() {
+bubles.remove();
+}, 100);
+
+});
+</script>
+</body>
+</html>
